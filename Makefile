@@ -17,6 +17,7 @@ sources: $(SOURCEFILES)
 $(SOURCEFILES):
 	@for sourcefile in $(SOURCEFILES); do \
 	    $(CLIENT) $(LOOKASIDE_URI)/$(NAME)/$${sourcefile}; \
+	    chmod +x $${sourcefile}; \
 	done
 
 	sha256sum -c sources || ( echo 'SHA256 check failed' && rm $(SOURCEFILES); exit 1 )
