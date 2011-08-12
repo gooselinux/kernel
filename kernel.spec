@@ -18,7 +18,7 @@ Summary: The Linux kernel
 
 %define rhel 1
 %if %{rhel}
-%define distro_build 71
+%define distro_build 72
 %define signmodules 1
 %else
 # fedora_build defines which build revision of this kernel version we're
@@ -1651,6 +1651,9 @@ fi
 %endif
 
 %changelog
+* Fri Aug 12 2011 Clint Savage <herlo1@gmail.com> [2.6.32-72.gl6]
+- Rebuild for GoOSe Linux using proper arches
+
 * Wed Sep 01 2010 Aristeu Rozanski <arozansk@redhat.com> [2.6.32-71.el6]
 - [fs] nfsd: initialize nfsd versions before creating svc (J. Bruce Fields) [628084]
 - [fs] nfsd: fix startup/shutdown order bug (J. Bruce Fields) [628084]
